@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+:root {
+    --text-color: #212121;
+    --white: #e9e9e9;
+    --light-gray-bg: #f5f5f5;
+    --gray-bg: #535353;
+    --separator-color: #cdcdcd;
+    --gutter: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:visited {
+    color: var(--text-color);
+}
+
+h1, h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.button {
+    border: 1px solid var(--text-color);
+    padding: 12px 40px;
+}
+
+.button:hover {
+    color: var(--white);
+    background: var(--text-color);
+}
+
+.button-white {
+    border: 1px solid var(--white);
+    color: var(--white) !important;
+}
+
+.button-white:hover {
+    color: var(--text-color) !important;
+    background: white;
+}
+
+.section-description {
+    width: 80%;
+    margin: auto;
+}
+
+.button-container {
+    margin: 80px 0;
+}
+
+header {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cssgrid_triangles.svg');
+    background-size: cover;
+    color: white;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.navigation-ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    width: 40%;
+}
+
+.top-nav a {
+    color: var(--white);
+}
+
+.top-nav a:hover {
+    color: #c4c4c4;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--gutter);
+    padding-top: 20px;
+    padding-bottom: 84px;
+}
+
+.hero-image {
+    padding-left: 60px;
+}
+
+.hero-copy > h1 {
+  font-size: 52px; 
+  margin-top: 50px;
+}
+
+.hero-copy p {
+    margin: 40px 0 68px;
+}
+
+.button {
+    margin-right: 14px;
+}
+
+
+.featured-section {
+    padding: 50px 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    grid-gap: var(--gutter);
+}
+
+.blog-section {
+    background: var(--light-gray-bg);
+    border-top: 1px solid var(--separator-color);
+    padding: 50px 0;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--gutter);
+    margin: 60px 0 60px;
+}
+
+footer {
+    background: var(--gray-bg);
+    color: var(--white);
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    list-style-type: none;
+}
+
+i {
+    color: var(--white);
+}
+
+
+/* Media Queries */
+
+/* Large devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    /* Navigation */
+    .top-nav {
+        flex-direction: column;
+    }
+
+    .navigation-ul {
+        width: 80%;
+        margin: auto;
+    
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    /* Hero-Section */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        padding: 0;
+        margin-top: 5.5em;
+    }
+
+    /* Featured Section */
+    .featured-section {
+        padding: 50px 0;
+    }
+
+    .products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Blog Section */
+    .blog-posts {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin: 3em 0;
+    }
+
+    .section-description {
+        text-align: center;
+    }
+
+    /* Footer Section */
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .made-with {
+        margin: auto;
+    }
+
+    .footer-nav {
+        margin: 1em auto;
+        width: 60%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+    
+}
+
+
+
+
+/* NOTE CSS GRID - A PRACTICAL EXAMPLE - PART 1 FINISHED */
+/* NOTE REVIEW CODE BEFORE MOVING TO PART 2 */
